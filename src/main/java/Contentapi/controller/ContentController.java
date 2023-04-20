@@ -11,11 +11,13 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 
+
 @RestController
 @RequestMapping("/api/content")
 public class ContentController {
 
     private final ContentRepository repository;
+
 
     public ContentController(ContentRepository repository) {
 

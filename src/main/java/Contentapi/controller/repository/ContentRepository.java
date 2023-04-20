@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+
 @Repository
 public class ContentRepository {
     private final List<Content> contentList = new ArrayList<>();
@@ -49,10 +50,14 @@ public class ContentRepository {
     }
 
     public boolean existsById(Integer id) {
+
         return contentList.stream().filter(c -> c.id().equals(id)).count() == 1;
     }
 
     public void delete(Integer id) {
         contentList.removeIf(c -> c.id().equals(id));
     }
+
+
+
 }
