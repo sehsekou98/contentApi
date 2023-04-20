@@ -1,0 +1,16 @@
+GET http://localhost:8080/api/content
+
+
+ POST http://localhost:8080/api/content
+ content-Type: application/json
+
+{
+	"id": "2",
+	"title": "Get Rich",
+	"desc": "My second book",
+	"status":"IDEA",
+	"contentType":"ARTICLE",
+	"dateCreated": "2023-04-20T02:19:43.477+00:00",
+	"dateUpdated": "null",
+	"url":""
+}
