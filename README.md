@@ -1,3 +1,3 @@
 # contentApi
-Api for contents
+Api for contents.
 Author: Sekou S Seh
