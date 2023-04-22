@@ -1,7 +1,8 @@
 package Contentapi.controller;
 
 
-import Contentapi.controller.repository.ContentRepository;
+import Contentapi.model.Status;
+import Contentapi.repository.ContentRepository;
 import Contentapi.model.Content;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -55,8 +56,19 @@ public class ContentController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Integer id){
-        repository.delete(id);
+
+        repository.deleteById(id);
     }
+
+    @GetMapping("/filter/{keyword}")
+    public List<Content> findByTitle(@PathVariable String keyword) {
+        return repository.findAllByTitleContains(keyword);
+    }
+
+  @GetMapping("/filter/status/{status}")
+    public List<Content> findByStatus(@PathVariable Status status) {
+        return repository.listByStatus(status);
+  }
 
 }
 

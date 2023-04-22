@@ -1,4 +1,4 @@
-package Contentapi.controller.repository;
+package Contentapi.repository;
 
 
 import Contentapi.model.Content;
@@ -14,9 +14,9 @@ import java.util.Optional;
 
 
 @Repository
-public class ContentRepository {
+public class ContentCollectionRepository {
     private final List<Content> contentList = new ArrayList<>();
-    public ContentRepository() {
+    public ContentCollectionRepository() {
 
     }
     public List<Content> findAll()
