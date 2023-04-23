@@ -2,7 +2,9 @@ package Contentapi.model;
 
 public enum Type {
     ARTICLE,
-    VIDEO,
+    BOOK,
+    CONFERENCE_TALK,
     COURSE,
-    CONFERENCE_TALK
+    VIDEO
+
 }
